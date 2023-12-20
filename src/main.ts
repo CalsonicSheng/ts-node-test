@@ -87,8 +87,8 @@ for all libraries that were originally written in JavaScript, not TypeScript (if
 
 */
 
-import { func1, func2, func3 } from './sub1.js';
-import { Complex, MoreShape, Shape, SampleType1, ObjectCombined, SampleType4, GenericInterface } from './types.js';
+import { func1, func2, func3 } from "./sub1.js";
+import { Complex, MoreShape, Shape, SampleType1, ObjectCombined, SampleType4, GenericInterface } from "./types.js";
 
 const v0: Shape = { width: 1, length: 1, height: 1 };
 
@@ -97,17 +97,17 @@ const v1: MoreShape = { width: 1, length: 1, height: 1, volumn: 3 };
 const v2: SampleType1 = 3;
 
 // to retrieve complex interface type, we have to use []
-const v3a: Complex['obj1'] = { a: '1', b: 1 };
+const v3a: Complex["obj1"] = { a: "1", b: 1 };
 
-const v3b: Complex['obj2'] = { c: '1', d: 1, e: 1 };
+const v3b: Complex["obj2"] = { c: "1", d: 1, e: 1 };
 
-const v4: ObjectCombined = { a: '1', b: 1, d: 1 };
+const v4: ObjectCombined = { a: "1", b: 1, d: 1 };
 
-const v5: SampleType4 = { a: '1', b: 1, c: '1' };
+const v5: SampleType4 = { a: "1", b: 1, c: "1" };
 
-const v6: GenericInterface<string> = { a: '1', b: 1 };
+const v6: GenericInterface<string> = { a: "1", b: 1 };
 
 // ts function will check if all required positional parameters are assigned with values or not (this is not impossible under pure js)
-func1<string>('3', 3); // function generic type
-func2({ a: '2' });
-func3({ a: '3' }, 9999999999);
+func1<string>("3", 3); // function generic type
+func2({ a: "2" });
+func3({ a: "3" }, 9999999999);
